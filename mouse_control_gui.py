@@ -17,7 +17,6 @@ from pynput.mouse import Button
 import threading
 import time
 import sys
-from PIL import Image, ImageDraw
 import tkinter as tk
 
 # Theme Settings
@@ -78,14 +77,7 @@ class EMCApp(CTk):
         
     def create_icon(self):
         """Create a simple icon for the window."""
-        try:
-            # Create a simple colored square as icon
-            img = Image.new('RGB', (64, 64), color='#0f3460')
-            draw = ImageDraw.Draw(img)
-            draw.rectangle([16, 16, 48, 48], fill='#e94560')
-            self.iconphoto(True, tk.PhotoImage(width=64, height=64))
-        except:
-            pass
+        pass  # Icon creation skipped for compatibility
     
     def build_ui(self):
         """Build the beautiful user interface."""
